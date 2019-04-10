@@ -43,7 +43,6 @@ m_ts <- Madtree_tweets %>%
   labs(title = "MadTree Twitter",
        subtitle = "Weekly Timeline") +
   theme_light()
-m_ts
 
 r_ts <- Rhinegeist_tweets %>%
   filter(created_at > "2016-1-01") %>%
@@ -52,7 +51,6 @@ r_ts <- Rhinegeist_tweets %>%
   labs(title = "Rhinegeist Twitter",
        subtitle = "Weekly Timeline") +
   theme_light()
-r_ts
 
 #'Text analysis Data Prep for Madtree. Remove any http from twitter text 
 Madtree_tweets$stripped_text <- gsub("http.*","",  Madtree_tweets$text)
